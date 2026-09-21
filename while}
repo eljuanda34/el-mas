@@ -1,0 +1,10 @@
+contador = 1
+while contador <= 10:
+    print( contador)
+    contador+=1
+
+num = int(input("digite el numero "))
+while num >=0:
+    num = int(input("digite el numero "))
+print( "el programa termino")
+    

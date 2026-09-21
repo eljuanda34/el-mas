@@ -1,0 +1,13 @@
+import random
+numero = random.randint(1,10)
+while True:
+    e = int(input( "digite el numero: "))
+    if numero == e:
+        c = "excelente eres la pampara"
+        print(c)
+        break
+    elif e > numero:
+        c = "es menor el numero"
+    else:
+        c = "es mayor el numero"
+    print(c)
