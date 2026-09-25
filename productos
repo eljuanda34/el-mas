@@ -1,0 +1,48 @@
+opcion = 0
+cantidad_ventas_realizadas = 0
+suma_subtotales = 0
+suma_descuentos = 0
+suma_total_final = 0
+
+while opcion !=4:
+    print("========TIENDA========")
+    print("1. registar venta")
+    print("2. consultar estadisticas")
+    print("3. salir")
+    print("=====SELECCIONE UNA OPCION=====")
+    
+    opcion=int(input("selecione un opcion del (1-3): "))
+
+    if opcion == 1:
+        nom_producto = input("nombre del producto? ")
+        pre_producto = float(input("precio del producto? "))
+        cant_comp = float(input("cantidad comprada? "))
+
+        subtotal = pre_producto * cant_comp
+
+    elif subtotal < 50000:
+        descuentos = 0
+        print = ("no obtiene descuento")
+
+    elif subtotal < 99999:
+        descuentos = subtotal * 0.05
+        print = ("obtiene descuento del 5%")
+
+    elif subtotal < 199999:
+        descuentos = subtotal * 0.10
+        print = ("obtiene descuento del 10%")
+
+    else:
+        descuentos = subtotal * 0.15
+        print = ("obtiene descuento del 15%")
+
+        total_final = subtotal-descuentos
+
+        suma_subtotales += subtotal
+        suma_descuentos += descuentos
+        suma_total_final += total_final
+    
+print("su producto es", nom_producto)
+print("el subtotal es", subtotal)
+print("descuento", descuentos)
+print("total_pagar", total_final)
