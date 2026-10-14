@@ -15,4 +15,27 @@ nombre = input("Ingrese el nombre de la pelicula: ").lower()
 cantidad = int(input("Ingrese la cantidad de entradas: "))
 monto_total = cantidad * tarifas[dia]
 
+match nombre:
+    case "chuky":
+        mensaje = "haz selecionado el chuky !preparate para no dormir¡ "
+        men = "no tienes ningun descuento 😥"
+    case "el conjuro":
+        mensaje = "haz selecionado el conjuro !ya no la cuentes por que no vas¡"
+        men = "no tienes ningun descuento 😥"
+    case "iro man":
+        mensaje = "haz selecionado iro man !preparate para la accion¡ "
+        men = "no tienes ningun descuento 😥"
+    case "dragon ball z":
+        mensaje = "haz selecionado draggn  ball z !a elevar tu ki¡"
+        men = "no tienes ningun descuento 😥" 
+    case "el chapulin":
+        monto_total *= 0.90
+        mensaje = "haz selecionado el chapulin !no contaban con mi astucia¡"
+        men = "excelente tienes un descuento del 10%"
+    case _:
+        pass
+
+print("-"*30, "RESUMEN", "-"*30)
+print(mensaje)
+print(men)
 print(f"El monto total a pagar es: ${monto_total:,}")
